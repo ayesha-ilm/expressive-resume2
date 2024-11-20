@@ -27,7 +27,7 @@
 % From https://gist.github.com/LanternD/1edd0fcc64f287d841b6da3ec38c69a2
 \RequirePackage{array}
 \newcolumntype{L}[1]
-{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+{>{\justifying\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{C}[1]
 {>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \newcolumntype{R}[1]
@@ -48,33 +48,34 @@
 %% Add support for nuanced list formatting
 \RequirePackage{enumitem}
 \setlist{nosep,topsep=0pt,leftmargin=12pt}
+\RequirePackage{ragged2e}
 
 %% Add support for customized section headers
 %% https://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/titlesec/titlesec.pdf
 \RequirePackage{titlesec}
 % Section Formatting
 \titleformat{\section}
-{\Large\scshape\raggedright}  % Shape
+{\Large\scshape\justifying}  % Shape
 {}
 {0em}
 {}
 [\titlerule]
 \titlespacing{\section}
-{0pt}  % `left`: Left Margin
-{0pt}  % `before-sep`: Vertical space before the title
-{5pt}  % `after-sep`: Vertical space after the title
-[0pt]  % `right-sep`: Right margin (affected by `hang`, `block`, and `display`)
+{0pt}  % Left margin
+{-5pt}  % Vertical space before the title
+{3pt}  % Vertical space after the title
+[0pt]  % Right margin
 % Sub-Section Formatting
 \titleformat{\subsection}
-{\scshape\raggedright}  % Shape
+{\scshape\justifying}  % Shape
 {}  % Label
 {0em}
 {}
 []
 \titlespacing{\subsection}
 {0pt}  % `left`: Left Margin
-{3pt}  % `before-sep`: Vertical space before the title
-{3pt}  % `after-sep`: Vertical space after the title
+{1pt}  % `before-sep`: Vertical space before the title
+{2pt}  % `after-sep`: Vertical space after the title
 [0pt]  % `right-sep`: Right margin (affected by `hang`, `block`, and `display`)
 
 %% Add support for commands with named arguments
@@ -98,7 +99,6 @@
 % Contact Information
 \newcommand{\nametitle}[2]{%
     { \Huge #1 \textsc{#2} }
-
     \medskip
 }
 \newcommand{\contactseparator}{
@@ -119,14 +119,25 @@
         \small{\item #1}
     \end{itemize}
 }
+\newcommand{\plainachievement}[1]{%
+    \begin{list}{}{\setlength{\leftmargin}{0em} \setlength{\itemindent}{0em}}
+        \item \small{#1}
+    \end{list}
+}
+
 \newcommand{\experience}[5]{%
     \noindent\role{#1}{#2}\hfill\tenure{#3}{#4}\par
     #5
     \vspace{7pt}
 }
+\newcommand{\plexperience}[5]{%
+\noindent\textbf{{#2}}
+#5
+\vspace{7pt}
+}
 
 %% ----- Four Required Configurations -----
 \renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
-\setlength{\textwidth}{7.5in}
+\setlength{\textwidth}{\dimexpr\paperwidth - 0in}
 \setlength{\textheight}{10in}
 \pagenumbering{arabic}

@@ -4,6 +4,7 @@
 %% ----- Options -----
 % https://www.latex-project.org/help/documentation/clsguide.pdf
 
+
 % None currently
 
 %% ----- Parent Class -----
@@ -11,7 +12,13 @@
 
 %% ----- Required Packages -----
 %% Define page layout
-\RequirePackage[margin=0.5in]{geometry}
+\RequirePackage[
+    left=0.3in,
+    right=0.1in,
+    top=0.2in,
+    bottom=0.2in,
+    heightrounded
+]{geometry}
     \pagestyle{empty}
 
 %% ----- Custom Commands -----
@@ -28,7 +35,8 @@
         fixobjectivespacing  % Fixes issues with vertical spacing when using QR Code + Objective statement.
         ]{
     \begin{flushleft}
-        \nametitle{\commandkey{firstname}}{\ifcommandkey{middleinitial}{\commandkey{middleinitial}. }{}\commandkey{lastname}}
+        \textbf{\LARGE{\commandkey{firstname}}{\ifcommandkey{middleinitial}{\commandkey{middleinitial}. }{} \commandkey{lastname}}}
+        \hspace{8in}
         {%
             \ifcommandkey{email}%
                 {%
@@ -78,13 +86,15 @@
     }{}
 }
 \newcommand{\objective}[1]{%
-    \begin{flushleft}
+    \begin{}
         \textsc{Objective}: #1
     \end{flushleft}
 }
 
 %% ----- Four Required Configurations -----
 \renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
-\setlength{\textwidth}{7.5in}
+\setlength{\textwidth}{7.9in}
 \setlength{\textheight}{10in}
+\setlength{\parindent}{0pt}
 \pagenumbering{arabic}
+

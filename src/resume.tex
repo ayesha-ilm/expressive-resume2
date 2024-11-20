@@ -2,62 +2,109 @@
 
 % ----- Resume -----
 \begin{document}
+% \justifying
 
 % ----- Name + Contact Information -----
 \resumeheader[
-    firstname=John,
-    middleinitial=N,
-    lastname=Doe,
-    email=john.doe@example.com,
-    phone=123-456-7890,
-    linkedin=johndoe,
-    github=johndoe,
-    city=Town,
-    state=State,
-    qrcode=./images/qr.png,
+    firstname=Hamza,
+    middleinitial=,
+    lastname=Akmal,
+    email=chaudry.h@northeastern.edu,
+    phone=,
+    linkedin=hamza-akmal-ch,
+    github=hamzaakmal98,
+    qrcode=,
     fixobjectivespacing=true
 ]
-
-\objective{A software engineering graduate with 2 years of work
-    experience at various internships \\ seeking opportunities to develop
-    web/mobile applications for Company XYZ.}
-
-% ----- Education -----
 \section{Education}
+\experience{Northeastern University}{MS Artificial Intelligence}{Sept 2024}{Jan 2026}
+{ \noindent\textbf{Alfond Scholars Grant Recipient} for advancing AI in
+digitally underserved areas
+\\ Relevant Coursework: Large Scale Data Processing, Scalable
+Distributed Systems, Cloud Computing, Data Mining, Advanced Computer
+Vision, Timeseries Analysis }
 
-\experience{Bachelor of Science}{Software Engineering}{Aug 2018}{May 2022}{
-    \noindent Fabulous Honors College \hfill GPA: 4.00 \newline
-    Super Duper University, Town, State \newline
-}
 
+\experience{Lahore University of Management Sciences}{BS Physics}{Sept 2020}{May 2024}
+{
+    \noindent
+    Relevant Coursework: Machine Learning in Physics, Computational
+    Physics, Quantum Computing}
+\renewcommand{\labelitemi}{\(\circ\)}  % Changes bullet points to outlined circles
 % ----- Work Experience -----
-\section{Work Experience}
-
-\experience{Summer Intern}{Radiant Software Systems}{Aug 2021}{May 2021}{
+\section{Experience}
+\experience{AI/ML Project Lead}{Amazon Web Services (AWS)}{Feb
+2023}{Sept 2024}{
     \achievement{
-
-        Developed a mobile app in \tech{React Native} that was
-        downloaded 100k times on Google Play.
-
+        \textbf{Geospatial Pollution Mapping:} Designed a GCNN deployed on AWS to spatially map sources of pollution in South Asia and Africa and produced a geo-coded GIS map to track and quantify pollutant emissions using ArcGIS and Tableau.
     }
     \achievement{
+    \textbf{Web Interface Development:}Led the development of the APAD web interface using Next.js and the MERN stack, integrating live satellite data for real-time pollution insights.
+    }
+    \achievement{
+    \textbf{Policy Support through Spatial Analysis:}Applied GIS and spatial analysis techniques in ArcGIS and Tableau to create interactive maps for pollution quantification, supporting policymakers and researchers.
+    }
+    }
 
-        Collaborated in an \tech{Agile/Scrum} team of 8 engineers to
-        deliver new features every 2 weeks.
+\experience{Graduate Course Tutor}{Khoury College of Computer Sciences}{Sept 2024}{Present}{
+    \achievement{
+    \textbf{Instruction and Tutoring:} Instructed 682 students on core concepts in logic, set theory, and combinatorics through tutoring.
+    }
+    \achievement{
+    \textbf{Resource Development:} Developed supplementary materials,
+    including lecture notes and problem sets, to simplify complex
+    mathematical concepts and guided students in practical application
+    through code.
+    }
+}
 
+\experience{Data Scientist}{Afiniti}{May 2022}{Sep 2024}{
+    \achievement{
+    \textbf{ETL Pipeline Development:} Built a robust ETL pipeline using SAS, SQL, and Qualtrics APIs to standardize and validate incoming client data, cutting processing time by 40\% and driving a 10-basis-point ROI increase through optimized resource allocation.
+    }
+    \achievement{
+        \textbf{Time-Series Forecasting:} Built a time-series forecasting model using LSTMs to predict market trends, improving prediction accuracy by 25\%. Integrated real-time financial data pipelines with AWS for continuous updates and enhanced decision-making.
+    }
+    \achievement{
+        \textbf{Reinforcement Learning for Asset Allocation:} Designed and implemented a reinforcement learning model to optimize asset allocation strategies, increasing portfolio returns by 15\% while maintaining risk thresholds. Leveraged Python and PyTorch for model development and backtesting on historical financial data.
     }
 }
 
-% ----- Technical Projects -----
-\section{Technical Projects}
 
-\experience{Expressive Resume}{Personal Project}{Nov 2021}{Dec 2021}{
+
+\section{Projects}
+
+
+\plexperience{}{Advanced Predictive Maintenance System for IoT Devices}{}{}
+{
     \achievement{
+    Designed and deployed a predictive maintenance system using sensor data from IoT devices. Built a deep learning model with temporal convolutional networks (TCNs) and LSTMs to predict equipment failures with 92\% accuracy. Integrated with Apache Kafka for real-time data ingestion and Spark for scalable processing, reducing unplanned downtime by 30\%. Leveraged Grafana for real-time monitoring and visualization of maintenance schedules. 
+}}
 
-        Created a \tech{\LaTeX} class that makes it easy for anyone to
-        quickly create a beautiful resume and cover letter.
-
+\plexperience{}{Knowledge Graph for Legal Document Analysis
+}{}{}
+{
+    \achievement{
+        Developed a scalable knowledge graph pipeline using Neo4j and PyTorch Geometric to extract and model relationships within legal documents. Implemented named entity recognition (NER) and relation extraction models using transformers to classify case precedents, laws, and outcomes. Enabled real-time query capabilities for legal professionals, improving information retrieval efficiency by 45\%.}
+}
+\plexperience{}{Real-Time Fraud Detection System for Financial Transactions
+}{}{}
+{
+    \achievement{
+        Engineered a fraud detection pipeline leveraging graph neural networks (GNNs) for anomaly detection in transaction data streams. Integrated the model with Apache Flink for real-time stream processing, reducing fraud detection time by 60\%. Used unsupervised learning techniques, including autoencoders and clustering algorithms, to identify previously unseen fraud patterns.
     }
 }
+
+% ----- Skills and Technologies -----
+\section{Languages and Platforms}
+\achievement{
+    \textbf{Languages:} Python, C/C++, Typescript/Javascript, Haskell, SQL
+}
+\achievement{
+    \textbf{Platforms/Libraries:} PyTorch, PostgreSQL, MongoDB, MERN, AWS,
+    ChromaDB, Neo4j, OpenCV, Google Earth Engine, OpenWPM, Docker, Git, TensorFlow, Keras,
+    Word2Vec, Pandas, HuggingFace, Seaborn, BeautifulSoup
+}
+
 
 \end{document}
